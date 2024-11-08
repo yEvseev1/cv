@@ -16,7 +16,7 @@ export default function Home() {
   return <div
     className="w-full h-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-bl from-black via-slate-800/40 to-black">
     <Particles
-      className="absolute inset-0"
+      className="absolute inset-0 -z-10 animate-fade-in"
       quantity={200}
       ease={70}
       color={"#ffffff"}
