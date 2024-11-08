@@ -1,8 +1,9 @@
 'use client'
 
 import {motion, useMotionTemplate, useSpring} from "framer-motion";
+import {cn} from "@/lib/utils";
 
-export default function AnimateCard({children}: { children: React.ReactNode }) {
+export default function AnimateCard({children, className}: { children: React.ReactNode, className?: string }) {
   const mouseX = useSpring(0, {stiffness: 500, damping: 80});
   const mouseY = useSpring(0, {stiffness: 500, damping: 80});
   
@@ -25,10 +26,10 @@ export default function AnimateCard({children}: { children: React.ReactNode }) {
         mouseX.set(0);
         mouseY.set(0);
       }}
-      className=" overflow-hidden relative w-96 h-96 duration-700 border rounded-xl hover:bg-zinc-800/10 md:gap-8 border-zinc-600 "
+      className={cn("overflow-hidden relative duration-700 border hover:bg-zinc-800/10 md:gap-8 border-zinc-600", className)}
     >
       <motion.div
-        className="absolute inset-0 opacity-5 bg-gradient-to-br"
+        className="absolute inset-0 opacity-10 bg-gradient-to-br"
         style={style}
       />
       

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Particles from "@/components/ui/particles";
 
-interface navigation {
+interface Navigation {
   label: string
   link: string
 }
 
-const navigations: navigation[] = [
+const navigations: Navigation[] = [
   {label: 'Обо мне', link: 'aboutMe'},
   {label: 'Контакты', link: 'contacts'},
   {label: 'Проекты', link: 'projects'},
