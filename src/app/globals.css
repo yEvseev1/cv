@@ -7,6 +7,11 @@ body {
 }
 
 @layer base {
+
+  .text-stroke {
+    -webkit-text-stroke: 1px white;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
