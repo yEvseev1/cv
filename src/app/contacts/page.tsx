@@ -14,19 +14,19 @@ interface Contact {
 const contacts: Contact[] = [
   {
     label: 'Telegram',
-    href: '#',
+    href: 'https://t.me/NextEnjoyer',
     link: '@NextEnjoyer',
     icon: <Send/>
   },
   {
     label: 'Email',
-    href: '#', //https://t.me/NextEnjoyer
-    link: '@NextEnjoyer',
+    href: 'mailto:yuraevseevft@mail.ru',
+    link: 'yuraevseevft@mail.ru',
     icon: <Mail/>
   },
   {
     label: 'Github',
-    href: '#', //https://github.com/yEvseev1
+    href: 'https://github.com/yEvseev1',
     link: 'yEvseev1',
     icon: <Github/>
   }
@@ -46,7 +46,9 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-16">
         {contacts.map((contact, index) => (
           <AnimateCard key={index}>
-            <div
+            <Link
+              href={contact.href}
+              target='_blank'
               className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 md:p-16"
             >
               <span
@@ -62,7 +64,7 @@ export default function ContactPage() {
 										{contact.label}
 									</span>
               </div>
-            </div>
+            </Link>
           </AnimateCard>
         ))}
       </div>
