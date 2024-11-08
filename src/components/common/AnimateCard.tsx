@@ -26,7 +26,7 @@ export default function AnimateCard({children, className}: { children: React.Rea
         mouseX.set(0);
         mouseY.set(0);
       }}
-      className={cn("overflow-hidden relative duration-700 border hover:bg-zinc-800/10 md:gap-8 border-zinc-600", className)}
+      className={cn("overflow-hidden rounded-xl relative duration-700 border hover:bg-zinc-800/10 md:gap-8 border-zinc-600", className)}
     >
       <motion.div
         className="absolute inset-0 opacity-10 bg-gradient-to-br"
