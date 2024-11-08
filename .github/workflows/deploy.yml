@@ -4,10 +4,8 @@ on:
   push:
     branches:
       - main
-
 permissions:
   contents: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -15,9 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set GITHUB_ACTIONS environment variable
-        run: echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
