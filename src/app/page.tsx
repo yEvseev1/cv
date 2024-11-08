@@ -1,5 +1,5 @@
-import Particles from "@/components/common/particles";
 import Link from "next/link";
+import Particles from "@/components/ui/particles";
 
 interface navigation {
   label: string
@@ -15,8 +15,13 @@ const navigations: navigation[] = [
 export default function Home() {
   return <div
     className="w-full h-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-bl from-black via-slate-800/40 to-black">
-    <Particles className="absolute inset-0 -z-10 animate-fade-in"
-               quantity={200}/>
+    <Particles
+      className="absolute inset-0"
+      quantity={200}
+      ease={70}
+      color={"#ffffff"}
+      refresh
+    />
     <nav className='animate-fade-in'>
       <ul className="relative bottom-8 flex items-center justify-center gap-8">
         {
