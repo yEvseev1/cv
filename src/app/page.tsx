@@ -9,7 +9,7 @@ interface Navigation {
 const navigations: Navigation[] = [
   {label: 'Обо мне', link: 'aboutMe'},
   {label: 'Контакты', link: 'contacts'},
-  {label: 'Проекты', link: 'projects'},
+  // {label: 'Проекты', link: 'projects'},
 ]
 
 export default function Home() {
