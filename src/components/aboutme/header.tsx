@@ -35,9 +35,9 @@ export default function Header() {
         <Link href='/contacts'>
           Контакты
         </Link>
-        <Link href='#'>
-          Проекты
-        </Link>
+        {/*<Link href='#'>*/}
+        {/*  Проекты*/}
+        {/*</Link>*/}
       </div>
     </div>
   </header>
